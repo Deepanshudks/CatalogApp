@@ -1,6 +1,6 @@
-# my_app
+# CatalogApp
 
-A new Flutter project.
+A Flutter project.
 
 ## Getting Started
 
