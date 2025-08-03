@@ -16,20 +16,8 @@ class Home extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              SizedBox(height: 24),
-              Text(
-                "Hello, Welcome to OnePiece",
-                style: TextStyle(fontSize: 26, fontWeight: FontWeight.w500),
-              ),
-              SizedBox(height: 14),
-              ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: WidgetStatePropertyAll(Colors.blueAccent),
-                  foregroundColor: WidgetStatePropertyAll(Colors.white),
-                ),
-                onPressed: () => {Navigator.pushNamed(context, "/login")},
-                child: Text('Click to login'),
-              ),
+              SizedBox(height: 400),
+              Text('Hey, Welcome to the app', style: TextStyle(fontSize: 20)),
             ],
           ),
         ),
