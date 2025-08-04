@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/widgets/drawer.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -6,25 +7,22 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blueAccent,
-        title: Text("My App"),
-
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: Text("Catalog App"), centerTitle: true),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
-              SizedBox(height: 400),
-              Text('Hey, Welcome to the app', style: TextStyle(fontSize: 20)),
+              SizedBox(height: 50),
+              Text('Hey, Welcome to the app', style: TextStyle(fontSize: 15)),
+              // ListView.builder(
+              //   itemCount: CatalogModel.all.length,
+              //   itemBuilder: (context, index) => {},
+              // ),
             ],
           ),
         ),
       ),
-      drawer: Drawer(
-        child: Center(child: Text('Drawer', style: TextStyle(fontSize: 20))),
-      ),
+      drawer: MyDrawer(),
     );
   }
 }
