@@ -10,27 +10,18 @@ class ProductDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Product Detail'),
-        backgroundColor: context.theme.canvasColor,
-      ),
+      appBar: AppBar(title: "Product Detail".text.make()),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Image.network(
-                product.imageUrl,
-                isAntiAlias: true,
-              ).box.rounded.p1.make().w24(context).p12(),
-              product.name.text.xl4.bold.make(),
-            ],
-          ),
-          p32(),
+          SizedBox(height: 24),
+          product.name.text.bold.make(),
+          Image.network(product.imageUrl).box.rounded.p8.make().w(400).h(200),
+          "\$${product.price.toString()}".text.bold.xl.make().py8(),
+          product.name.text.xl2.bold.make(),
+          product.desc.text.make().p16(),
+          ElevatedButton(onPressed: () {}, child: "Buy Now".text.lg.make()),
         ],
-      ).centered(),
+      ),
     );
   }
 }
