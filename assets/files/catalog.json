@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 15 Pro",
+    "price": 1199,
+    "color": "#1c1c1e",
+    "imageUrl": "https://www.imagineonline.store/cdn/shop/files/iPhone_15_Pink_PDP_Image_Position-1__en-IN.jpg?v=1694605258&width=823",
+    "desc": "Apple's latest flagship with A17 chip and titanium body."
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S24 Ultra",
+    "price": 1299,
+    "color": "#6e6e6e",
+    "imageUrl": "https://media.wishque.com/data/images/products/11423/65395282_259007609966_0.66966800-1708668229.png",
+    "desc": "High-end Android with 200MP camera and S Pen support."
+  },
+  {
+    "id": 3,
+    "name": "MacBook Air M3",
+    "price": 999,
+    "color": "#1e1e1e",
+    "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTtBxBO8qamB_du5n-4F-i9TL1vAswQE6qXdLnX92SOONv8rNFjsEaV_fx8Xm6NZ1ys_qHv_K4kzP2_lcevor_jJcfUwzv3Nqz--dEdwJUfFRjmxWalq0ohbA",
+    "desc": "Lightweight laptop with Apple Silicon M3 chip."
+  },
+  {
+    "id": 4,
+    "name": "Google Pixel 8 Pro",
+    "price": 999,
+    "color": "#1e1e1e",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR4_PblN5l7KHVAzlSZl2ftN6y-cLLO1FvHAAaIGsi5_aHk711X85t5beKO7ro-PUEEJ8SgWPsE60P5k7Qah0pFknvRP_U9",
+    "desc": "Flagship Android with advanced AI features."
+  },
+  {
+    "id": 5,
+    "name": "Nintendo Switch OLED",
+    "price": 349,
+    "color": "#ffffff",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeEGsorDYoIHadGfqejZ3n7z5i_Fsci0v1VA&s",
+    "desc": "Hybrid gaming console with OLED display."
+  }
+]

@@ -1,28 +1,54 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:my_app/widgets/drawer.dart';
+import 'package:flutter/services.dart';
+import 'package:my_app/models/catalog.dart';
+import 'package:my_app/widgets/home_widgets/catelog_header.dart';
+import 'package:my_app/widgets/home_widgets/catelog_list.dart';
+import 'package:velocity_x/velocity_x.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  loadData() async {
+    await Future.delayed(Duration(seconds: 2));
+    final loadedData = await rootBundle.loadString("assets/files/catalog.json");
+    final decodedData = jsonDecode(loadedData);
+    CatalogModel.items = List.from(
+      decodedData,
+    ).map<Item>((element) => Item.fromMap(element)).toList();
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Catalog App"), centerTitle: true),
-      body: SingleChildScrollView(
-        child: Center(
+      // backgroundColor: Colors.tealAccent,
+      body: SafeArea(
+        child: Container(
+          padding: Vx.m24,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 50),
-              Text('Hey, Welcome to the app', style: TextStyle(fontSize: 15)),
-              // ListView.builder(
-              //   itemCount: CatalogModel.all.length,
-              //   itemBuilder: (context, index) => {},
-              // ),
+              MyHeader(),
+              10.heightBox,
+              (CatalogModel.items.isNotEmpty)
+                  ? CatalogList().expand()
+                  : CircularProgressIndicator().centered(),
             ],
           ),
         ),
       ),
-      drawer: MyDrawer(),
     );
   }
 }
