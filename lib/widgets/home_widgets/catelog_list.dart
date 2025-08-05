@@ -17,6 +17,7 @@ class CatalogList extends StatelessWidget {
         itemBuilder: (context, index) {
           final item = CatalogModel.items[index];
           return InkWell(
+            focusColor: Colors.white,
             onTap: () {
               Navigator.push(
                 context,
